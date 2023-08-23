@@ -1,0 +1,9 @@
+nom_plage                 VARCHAR(255)
+longueur_plage            DECIMAL(4,2) 
+nom_ville                 VARCHAR(255)
+code_postal_ville         VARCHAR(5)
+type_plage                SET("sable", "galet", "rocher")
+nombre_touriste           INT
+nom_region                VARCHAR(255)
+nom_responsable           VARCHAR(255)
+prenom_responsable        VARCHAR(255)
