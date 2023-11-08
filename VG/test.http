@@ -1,0 +1,41 @@
+GET http://127.0.0.1:8000/api/clients
+Accept: application/json 
+
+
+###
+
+POST http://127.0.0.1:8000/api/clients
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nom": "tutu",
+    "prenom": "tutu"
+}
+
+
+###
+
+DELETE http://127.0.0.1:8000/api/clients/4
+
+
+###
+
+PUT http://127.0.0.1:8000/api/clients/7
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nom": "robert",
+    "prenom": "bill"
+}
+
+###
+
+PATCH http://127.0.0.1:8000/api/clients/6
+Content-Type: application/merge-patch+json
+Accept: application/json
+
+{
+    "nom": "steve"
+}
