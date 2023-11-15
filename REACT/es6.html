@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function message() {
+        console.log("coucou...");
+    }
+
+    const message2 = () => {
+        console.log("coucou encore");
+    }
+
+    const add = (a,b) => {
+        return a+b;
+    }
+
+    const add2 = (a,b) => a+b;
+
+    message();
+    message2();
+
+    console.log(add(2,3));
+    console.log(add2(2,3));
+
+
+
+
+
+    console.log("111");
+    fetch("http://api.themoviedb.org/3/search/movie?api_key=f33cd318f5135dba306176c13104506a&query=avenger")
+        .then( (response) => {
+            console.log("222");
+            return response.json()
+                .then( (data) => {
+                    console.log("333");
+                    console.log(data);
+                })
+        })
+    console.log("444");
+
+    console.log("-------------------------------")
+    async function test() {
+
+        console.log("111");
+        const resultat = await fetch("http://api.themoviedb.org/3/search/movie?api_key=f33cd318f5135dba306176c13104506a&query=avenger");
+        console.log(resultat);
+        const resultat2 = await resultat.json();
+        console.log(resultat2);
+        
+        console.log("444");
+    }
+
+    test();
+    
+</script>
