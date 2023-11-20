@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <div class="col-12">
+        <h2>{{produit.nom}}</h2>
+        <img src="/images/{{produit.image}}" alt="">
+        <h3>{{produit.description}}</h3>
+        <p>
+        <b>{{produit.prix | format_currency('EUR', locale='fr') }}</b>
+        </p>
+        <a href="/add/{{produit.id}}" class="btn btn-primary">
+            Ajouter au panier
+        </a>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<h2>Panier</h2>
+{% for produit in panier %}
+    <div>
+    {{produit.quantite}} - {{produit.nom}}
+    </div>
+    
+{% endfor %}
+{% endblock %}
